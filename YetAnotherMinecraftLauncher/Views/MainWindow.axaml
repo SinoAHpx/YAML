@@ -20,18 +20,46 @@
             <Grid ColumnDefinitions="3*,7*">
                 <Border CornerRadius="10,0,0,10">
                     <Border.Background>
-                        <SolidColorBrush Color="MistyRose" />
+                        <ImageBrush Source="{Binding AccountAvatar}" />
                     </Border.Background>
                 </Border>
+
+                <Grid Grid.Column="1" RowDefinitions="3*,2*,5*" Margin="10">
+                    <TextBlock FontSize="20" FontWeight="Bold"
+                               ToolTip.Tip="{Binding AccountName}"
+                               Text="{Binding AccountName}" />
+
+                    <TextBlock Grid.Row="1" FontSize="14" Text="{Binding AccountType}" />
+
+                    <Button Grid.Row="2" assists:ButtonAssist.CornerRadius="50"
+                            Width="40" Height="40" Foreground="Black" Margin="-10"
+                            Classes="Flat" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                        <avalonia:MaterialIcon Kind="ChevronDown" Width="30" Height="30" />
+                    </Button>
+                </Grid>
             </Grid>
         </Border>
-        <Border Grid.Row="1" CornerRadius="10" Background="#D6D6D6" Margin="10">
+        <Border Grid.Row="1" CornerRadius="10" Background="#D6D6D6" Margin="10,10,10,0">
             <Grid ColumnDefinitions="3*,7*">
                 <Border CornerRadius="10,0,0,10">
                     <Border.Background>
-                        <SolidColorBrush Color="MistyRose" />
+                        <ImageBrush Source="{Binding VersionAvatar}" />
                     </Border.Background>
                 </Border>
+
+                <Grid Grid.Column="1" RowDefinitions="3*,2*,5*" Margin="10">
+                    <TextBlock FontSize="20" FontWeight="Bold"
+                               ToolTip.Tip="{Binding AccountName}"
+                               Text="{Binding AccountName}" />
+
+                    <TextBlock Grid.Row="1" FontSize="14" Text="{Binding AccountType}" />
+
+                    <Button Grid.Row="2" assists:ButtonAssist.CornerRadius="50"
+                            Width="40" Height="40" Foreground="Black" Margin="-10"
+                            Classes="Flat" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                        <avalonia:MaterialIcon Kind="ChevronDown" Width="30" Height="30" />
+                    </Button>
+                </Grid>
             </Grid>
         </Border>
 
