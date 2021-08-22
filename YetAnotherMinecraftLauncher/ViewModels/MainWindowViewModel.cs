@@ -17,6 +17,22 @@ namespace YetAnotherMinecraftLauncher.ViewModels
             set => this.RaiseAndSetIfChanged(ref _versionAvatar, value);
         }
 
+        private string _versionName = "1.8.9-forge1.8.9-11.15.1.2318-1.8.9";
+
+        public string VersionName
+        {
+            get => _versionName;
+            set => this.RaiseAndSetIfChanged(ref _versionName, value);
+        }
+
+        private string _versionType = "Forge";
+
+        public string VersionType
+        {
+            get => _versionType;
+            set => this.RaiseAndSetIfChanged(ref _versionType, value);
+        }
+
         private Bitmap _accountAvatar = new(@"C:\Users\ahpx\Desktop\AHpxEx.png");
 
         public Bitmap AccountAvatar
