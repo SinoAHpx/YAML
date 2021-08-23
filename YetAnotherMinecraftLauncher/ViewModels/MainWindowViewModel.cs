@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Avalonia;
 using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using ReactiveUI;
 
 namespace YetAnotherMinecraftLauncher.ViewModels
@@ -10,7 +12,9 @@ namespace YetAnotherMinecraftLauncher.ViewModels
     {
         public string Greeting => "Welcome to Avalonia!";
 
-        private Bitmap _versionAvatar = new(@"C:\Users\ahpx\Desktop\AHpxEx.png");
+        private Bitmap _versionAvatar = new(AvaloniaLocator.Current
+            .GetService<IAssetLoader>()
+            .Open(new Uri(@"avares://YetAnotherMinecraftLauncher/Assets/DefaultVersionAvatar.webp")));
         public Bitmap VersionAvatar
         {
             get => _versionAvatar;
@@ -33,7 +37,9 @@ namespace YetAnotherMinecraftLauncher.ViewModels
             set => this.RaiseAndSetIfChanged(ref _versionType, value);
         }
 
-        private Bitmap _accountAvatar = new(@"C:\Users\ahpx\Desktop\AHpxEx.png");
+        private Bitmap _accountAvatar = new(AvaloniaLocator.Current
+            .GetService<IAssetLoader>()
+            .Open(new Uri(@"avares://YetAnotherMinecraftLauncher/Assets/DefaultAccountAvatar.png")));
 
         public Bitmap AccountAvatar
         {

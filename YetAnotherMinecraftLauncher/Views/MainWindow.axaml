@@ -21,7 +21,7 @@
             <Grid ColumnDefinitions="3*,7*">
                 <styles:Card CornerRadius="10,0,0,10">
                     <styles:Card.Background>
-                        <ImageBrush Source="{Binding VersionAvatar}" />
+                        <ImageBrush Stretch="Fill" Source="{Binding VersionAvatar}" />
                     </styles:Card.Background>
                 </styles:Card>
 
