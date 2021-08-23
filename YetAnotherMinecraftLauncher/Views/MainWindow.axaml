@@ -35,7 +35,7 @@
                     <Button Grid.Row="2" assists:ButtonAssist.CornerRadius="50"
                             Width="40" Height="40" Foreground="Black" Margin="-10"
                             Classes="Flat" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                        <avalonia:MaterialIcon Kind="ChevronDown" Width="30" Height="30" />
+                        <avalonia:MaterialIcon Kind="ChevronRight" Width="30" Height="30" />
                     </Button>
                 </Grid>
             </Grid>
@@ -44,7 +44,7 @@
             <Grid ColumnDefinitions="3*,7*">
                 <styles:Card CornerRadius="10,0,0,10">
                     <styles:Card.Background>
-                        <ImageBrush Source="{Binding VersionAvatar}" />
+                        <ImageBrush Source="{Binding AccountAvatar}" />
                     </styles:Card.Background>
                 </styles:Card>
 
@@ -58,7 +58,7 @@
                     <Button Grid.Row="2" assists:ButtonAssist.CornerRadius="50"
                             Width="40" Height="40" Foreground="Black" Margin="-10"
                             Classes="Flat" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                        <avalonia:MaterialIcon Kind="ChevronDown" Width="30" Height="30" />
+                        <avalonia:MaterialIcon Kind="ChevronRight" Width="30" Height="30" />
                     </Button>
                 </Grid>
             </Grid>
