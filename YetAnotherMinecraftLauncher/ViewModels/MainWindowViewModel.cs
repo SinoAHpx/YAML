@@ -46,7 +46,7 @@ namespace YetAnotherMinecraftLauncher.ViewModels
             set => this.RaiseAndSetIfChanged(ref _accountAvatar, value);
         }
 
-        private string _accountName = "alwhdawdjklhjawkjdhawkdjh";
+        private string _accountName = "SinoAHpx";
 
         public string AccountName
         {
