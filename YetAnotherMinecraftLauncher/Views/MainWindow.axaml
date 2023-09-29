@@ -3,11 +3,11 @@
         xmlns:vm="using:YetAnotherMinecraftLauncher.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Material.Styles.Controls;assembly=Material.Styles"
         xmlns:assists="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
         xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
-        xmlns:styles="clr-namespace:Material.Styles;assembly=Material.Styles"
         mc:Ignorable="d" Width="350" Height="550"
-        CanResize="False"
+        CanResize="False" WindowStartupLocation="CenterScreen"
         x:Class="YetAnotherMinecraftLauncher.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="YAML">
@@ -17,13 +17,13 @@
     </Design.DataContext>
 
     <Grid RowDefinitions="2*,2*,6*">
-        <styles:Card Grid.Row="0" Padding="0" CornerRadius="10" Margin="10,10,10,0">
+        <controls:Card Grid.Row="0" Padding="0" CornerRadius="10" Margin="10,10,10,0">
             <Grid ColumnDefinitions="3*,7*">
-                <styles:Card CornerRadius="10,0,0,10">
-                    <styles:Card.Background>
+                <controls:Card CornerRadius="10,0,0,10">
+                    <controls:Card.Background>
                         <ImageBrush Stretch="Fill" Source="{Binding VersionAvatar}" />
-                    </styles:Card.Background>
-                </styles:Card>
+                    </controls:Card.Background>
+                </controls:Card>
 
                 <Grid Grid.Column="1" RowDefinitions="3*,3*,4*" Margin="10">
                     <TextBlock FontSize="20" FontWeight="Bold"
@@ -32,21 +32,21 @@
 
                     <TextBlock Grid.Row="1" FontSize="16" Text="{Binding VersionType}" />
 
-                    <Button Grid.Row="2" assists:ButtonAssist.CornerRadius="50"
+                    <Button Grid.Row="2" CornerRadius="50"
                             Width="40" Height="40" Foreground="Black" Margin="-10"
                             Classes="Flat" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                         <avalonia:MaterialIcon Kind="ChevronRight" Width="30" Height="30" />
                     </Button>
                 </Grid>
             </Grid>
-        </styles:Card>
-        <styles:Card Padding="0" Grid.Row="1" CornerRadius="10" Margin="10,10,10,0">
+        </controls:Card>
+        <controls:Card Padding="0" Grid.Row="1" CornerRadius="10" Margin="10,10,10,0">
             <Grid ColumnDefinitions="3*,7*">
-                <styles:Card CornerRadius="10,0,0,10">
-                    <styles:Card.Background>
+                <controls:Card CornerRadius="10,0,0,10">
+                    <controls:Card.Background>
                         <ImageBrush Source="{Binding AccountAvatar}" />
-                    </styles:Card.Background>
-                </styles:Card>
+                    </controls:Card.Background>
+                </controls:Card>
 
                 <Grid Grid.Column="1" RowDefinitions="3*,3*,4*" Margin="10">
                     <TextBlock FontSize="20" FontWeight="Bold"
@@ -55,14 +55,14 @@
 
                     <TextBlock Grid.Row="1" FontSize="16" Text="{Binding AccountType}" />
 
-                    <Button Grid.Row="2" assists:ButtonAssist.CornerRadius="50"
+                    <Button Grid.Row="2" CornerRadius="50"
                             Width="40" Height="40" Foreground="Black" Margin="-10"
                             Classes="Flat" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                         <avalonia:MaterialIcon Kind="ChevronRight" Width="30" Height="30" />
                     </Button>
                 </Grid>
             </Grid>
-        </styles:Card>
+        </controls:Card>
 
         <Grid RowDefinitions="9*,2*" Grid.Row="2" Margin="10,0,10,75">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1">
@@ -70,7 +70,7 @@
                         Background="#586EBC"
                         Width="40" Height="40"
                         Margin="0,0,5,0"
-                        assists:ButtonAssist.CornerRadius="100">
+                        CornerRadius="100">
                     <avalonia:MaterialIcon Kind="Account" />
                 </Button>
 
@@ -78,14 +78,14 @@
                         Background="#586EBC"
                         Width="40" Height="40"
                         Margin="0,0,5,0"
-                        assists:ButtonAssist.CornerRadius="100">
+                        CornerRadius="100">
                     <avalonia:MaterialIcon Kind="Download" />
                 </Button>
 
                 <Button Foreground="white"
                         Background="#586EBC"
                         Width="40" Height="40"
-                        assists:ButtonAssist.CornerRadius="100">
+                        CornerRadius="100">
                     <avalonia:MaterialIcon Kind="Settings" />
                 </Button>
 
@@ -97,7 +97,7 @@
                 HorizontalAlignment="Right"
                 Margin="10"
                 assists:ButtonAssist.ClickFeedbackColor="White"
-                assists:ButtonAssist.CornerRadius="10"
+                CornerRadius="10"
                 Width="160" Height="60" />
     </Grid>
 

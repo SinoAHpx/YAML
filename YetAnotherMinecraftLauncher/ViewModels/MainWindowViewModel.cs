@@ -12,9 +12,8 @@ namespace YetAnotherMinecraftLauncher.ViewModels
     {
         public string Greeting => "Welcome to Avalonia!";
 
-        private Bitmap _versionAvatar = new(AvaloniaLocator.Current
-            .GetService<IAssetLoader>()
-            .Open(new Uri(@"avares://YetAnotherMinecraftLauncher/Assets/DefaultVersionAvatar.webp")));
+        private Bitmap _versionAvatar = new(AssetLoader.Open(
+            new Uri("avares://YetAnotherMinecraftLauncher/Assets/DefaultVersionAvatar.webp")));
         public Bitmap VersionAvatar
         {
             get => _versionAvatar;
@@ -37,9 +36,9 @@ namespace YetAnotherMinecraftLauncher.ViewModels
             set => this.RaiseAndSetIfChanged(ref _versionType, value);
         }
 
-        private Bitmap _accountAvatar = new(AvaloniaLocator.Current
-            .GetService<IAssetLoader>()
-            .Open(new Uri(@"avares://YetAnotherMinecraftLauncher/Assets/DefaultAccountAvatar.png")));
+        private Bitmap _accountAvatar =
+            new(AssetLoader.Open(
+                new Uri("avares://YetAnotherMinecraftLauncher/Assets/DefaultAccountAvatar.png")));
 
         public Bitmap AccountAvatar
         {
